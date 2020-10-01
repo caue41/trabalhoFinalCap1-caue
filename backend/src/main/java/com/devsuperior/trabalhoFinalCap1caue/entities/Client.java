@@ -1,7 +1,6 @@
 package com.devsuperior.trabalhoFinalCap1caue.entities;
 
 import java.io.Serializable;
-import java.time.Instant;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,13 +19,13 @@ public class Client implements Serializable{
 	private String name;
 	private String cpf;
 	private Double income;
-	private Instant birthDate;
+	private String birthDate;//Efetuar implementação do instant(verificar qual o padrao da data)
 	private Integer children;
 	
 	public Client() {
 	}
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, String birthDate, Integer children) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -68,11 +67,11 @@ public class Client implements Serializable{
 		this.income = income;
 	}
 
-	public Instant getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Instant birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
